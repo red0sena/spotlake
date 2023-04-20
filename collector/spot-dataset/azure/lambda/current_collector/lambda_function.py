@@ -28,7 +28,7 @@ def azure_collector(timestamp):
         current_df = collect_price_with_multithreading()
         eviction_df = load_if()
         join_df = merge_df(current_df, eviction_df)
-
+        ## test
         # load previous dataframe
         s3 = boto3.resource('s3')
         object = s3.Object(STORAGE_CONST.BUCKET_NAME, AZURE_CONST.S3_LATEST_DATA_SAVE_PATH)
