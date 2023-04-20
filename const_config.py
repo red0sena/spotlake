@@ -10,11 +10,11 @@ def constant(func):
 class Storage(object):
     @constant
     def BUCKET_NAME():
-        return "spotlake"
+        return "azure-latest-test"
     
     @constant
     def DATABASE_NAME():
-        return "spotlake"
+        return "spotlake-test"
 
     @constant
     def AWS_TABLE_NAME():
@@ -22,7 +22,7 @@ class Storage(object):
 
     @constant
     def AZURE_TABLE_NAME():
-        return "azure"
+        return "azure-test"
 
     @constant
     def GCP_TABLE_NAME():
@@ -48,7 +48,7 @@ class AwsCollector(object):
 class AzureCollector(object):
     @constant
     def SLACK_WEBHOOK_URL():
-        return ""
+        return "https://hooks.slack.com/services/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"
 
     @constant
     def GET_EVICTION_RATE_URL():
