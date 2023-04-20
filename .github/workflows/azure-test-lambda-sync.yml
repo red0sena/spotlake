@@ -15,7 +15,7 @@ env:
 
 jobs:
   deploy_source:
-    name: deploy lambda from source
+    name: deploy test lambda from source
     runs-on: ubuntu-latest
     steps:
       - name: checkout source code
@@ -29,4 +29,4 @@ jobs:
           mv ./collector/spot-dataset/azure/lambda/current_collector/azure_lambda.zip ./
       - name: Deploy to lambda
         run: |
-          aws lambda update-function-code --function-name azure-auth --zip-file fileb://azure_lambda.zip
+          aws lambda update-function-code --function-name azure-test-collector --zip-file fileb://azure_lambda.zip
